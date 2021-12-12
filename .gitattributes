@@ -2,6 +2,8 @@
 # Set default behavior to automatically normalize line endings.
 ###############################################################################
 * text=auto
+* linguist-vendored
+*.js linguist-vendored=false
 
 ###############################################################################
 # Set default behavior for command prompt diff.
@@ -62,5 +64,3 @@
 #*.rtf   diff=astextplain
 #*.RTF   diff=astextplain
 
-* linguist-vendored
-*.js linguist-vendored=false
