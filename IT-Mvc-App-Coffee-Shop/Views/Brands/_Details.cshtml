@@ -1,0 +1,21 @@
+﻿@model IT_Mvc_App_Coffee_Shop.Models.Brand
+
+
+    <h3 class="modal-title text-center" style="margin-top: 5%;">@Model.Name</h3>
+    <hr />
+    <div class="modal-body modal-style">
+        <dl class="dl-horizontal">
+            <img src="@Model.LogoUrl" style="max-block-size: 200px; margin-left: 27%"/>
+            <hr />
+            <br/>
+            <dt class="text-center">
+                @Html.DisplayNameFor(model => model.About)
+            </dt>
+            <dd class="text-justify" style="padding: 4%">
+                @Html.DisplayFor(model => model.About)
+            </dd>
+        </dl>
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-outline-dark" style="border-radius:10px" data-dismiss="modal">Close</button>
+    </div>

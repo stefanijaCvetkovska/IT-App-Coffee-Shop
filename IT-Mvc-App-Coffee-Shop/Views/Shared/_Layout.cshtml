@@ -1,0 +1,80 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="~/Images/coffee-beans.png" />
+    <title>Paradise Café: @ViewBag.Title</title>
+    @Styles.Render("~/Content/css")
+    @Styles.Render("~/Content/StyleSheet.css")
+    @Scripts.Render("~/bundles/modernizr")
+</head>
+<body>
+    <nav class="navbar navbar-expand fixed-top">
+        @Html.ActionLink("Online Coffee Shop", "Index", "Home", new { area = "" }, new { @class = "navbar-brand logo" })
+        <ul class="navbar-nav navbar-collapse">
+            <li class="nav-item nav-link">
+                @Html.ActionLink("Brands", "Index", "Brands")
+            </li>
+            <li class="nav-item nav-link">
+                @Html.ActionLink("Stores", "Index", "Stores")
+            </li>
+            <li class="nav-item nav-link">
+                @Html.ActionLink("Drinks", "Index", "Drinks")
+            </li>
+            <li class="nav-item nav-link">
+                @Html.ActionLink("Contact", "Contact", "Home")
+            </li>
+            <li class="nav-item nav-link">
+                @Html.ActionLink("About", "About", "Home")
+            </li>
+            @if (User.IsInRole("Admin"))
+            {
+                <li class="nav-item nav-link">
+                    @Html.ActionLink("Roles", "AddUserToRole", "Account")
+                </li>
+            }
+        </ul>
+        @Html.Partial("_LoginPartial")
+    </nav>
+    <div class="container-fluid">
+        @RenderBody()
+        <br />
+        <!-- Footer -->
+        <footer class="text-center">
+            <br />
+            <div class="container p-3">
+                <section class="mb-8 footer-links">
+                    <!-- Facebook -->
+                    <a href="#!">
+                        <img src="~/Images/facebook.png" class="footer-social-media" />
+                    </a>
+                    <!-- Twitter -->
+                    <a href="#!">
+                        <img src="~/Images/twitter.png" class="footer-social-media" />
+                    </a>
+                    <!-- Instagram -->
+                    <a href="#!">
+                        <img src="~/Images/instagram.png" class="footer-social-media" />
+                    </a>
+                    <!-- LinkedIn -->
+                    <a href="#!">
+                        <img src="~/Images/pinterest.png" class="footer-social-media" />
+                    </a>
+                </section>
+            </div>
+            <div class="text-center p-3">
+                © 2021 Copyright:
+                <a class="text-dark" href="#!">My ASP.NET Application </a>
+            </div>
+        </footer>
+        <!-- Footer -->
+    </div>
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/jqueryval")
+    @Scripts.Render("~/bundles/bootstrap")
+    @RenderSection("scripts", required: false)
+    @RenderSection("Styles", required: false)
+</body>
+</html>

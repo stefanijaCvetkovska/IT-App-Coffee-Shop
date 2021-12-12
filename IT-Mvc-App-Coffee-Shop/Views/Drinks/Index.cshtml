@@ -1,0 +1,85 @@
+﻿@model PagedList.IPagedList<IT_Mvc_App_Coffee_Shop.Models.Drink>
+@using PagedList.Mvc;
+@{
+    ViewBag.Title = "Drinks";
+}
+
+<div class="header-style">
+    <h1 class="text-center headings-style">
+        Drinks
+    </h1>
+</div>
+
+<div id="discount-button" class="style-discount-button">
+    <input value="Special Offer 💵" type="button" class="offer-style" />
+</div>
+
+<div id="daily-discount">
+    @{Html.RenderAction("DailyDiscount");}
+</div>
+
+<hr />
+
+<div class="sorting-btn">
+    @Html.ActionLink("Click to sort by price 🏷️", "Index", new { sortOrder = ViewBag.PriceSort }, new { @class = "sort-by-btn" })
+    @Html.ActionLink("Click to sort by name  ☕", "Index", new { sortOrder = ViewBag.NameSort }, new { @class = "sort-by-btn" })
+</div>
+
+
+<div class="row">
+    @foreach (var item in Model)
+    {
+        <div class="flip-card">
+            <div class="flip-card-inner">
+                <div class="flip-card-front">
+                    <img src="~/Images/coff.png" style="max-block-size: 150px; margin-left: 15%" />
+                    <h2 style="font-weight: 900; font-size: 50px; margin-top: 5%; margin-left: 5%" class="text-center">
+                        @Html.DisplayFor(model => item.Name)
+                    </h2>
+                    <p class="text-center font-weight-bold" style="font-size: x-large;">
+                        @String.Format("{0:F}", item.Price) MKD
+                    </p>
+                </div>
+                <div class="flip-card-back">
+                    @Html.DisplayFor(model => item.Description)<br /><br />
+                    @Html.ActionLink("Order here", "MakeOrder", new { id = item.Id }, new { @class = "action-link-order" })
+                    <div class="text-center">
+                        @if (User.IsInRole("Admin") || (User.IsInRole("Manager")))
+                        {
+                            <hr />
+                            @Html.ActionLink("Edit", "Edit", new { id = item.Id }, new { @class = "action-link-drinks" })
+                            @Html.Raw("  ")
+                            @Html.ActionLink("Delete", "Delete", new { id = item.Id }, new { @class = "action-link-drinks" })
+                            @Html.Raw("  ")
+                        }
+                    </div>
+                </div>
+            </div>
+        </div>
+    }
+</div>
+@if (User.IsInRole("Admin"))
+{
+    <div class="text-center adj-margin">
+        @Html.ActionLink("Add New Coffee", "Create", null, new { @class = "create-link-style" })
+    </div>
+
+}
+<hr />
+<div class="move-pagin">
+    <div>
+        Page @(Model.PageCount < Model.PageNumber ? 0 : Model.PageNumber) of @Model.PageCount
+        @Html.PagedListPager(Model, page => Url.Action("Index", new { page, sortOrder = ViewBag.CurrentSort, currentFilter = ViewBag.CurrentFilter }))
+    </div>
+</div>
+@section scripts{
+    <script src="~/Scripts/jquery.unobtrusive-ajax.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $("#daily-discount").hide();
+            $("#discount-button").click(function () {
+                $("#daily-discount").toggle("slow");
+            });
+        });
+    </script>
+}

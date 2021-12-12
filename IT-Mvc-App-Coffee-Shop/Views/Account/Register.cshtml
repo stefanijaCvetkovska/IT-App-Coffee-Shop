@@ -1,0 +1,53 @@
+﻿@model IT_Mvc_App_Coffee_Shop.Models.RegisterViewModel
+@{
+    ViewBag.Title = "Register";
+}
+
+<div class="circle-green"></div>
+<div class="circle-brown"></div>
+
+<div class="card login-register-form">
+
+    <h2 class="text-center">@ViewBag.Title.</h2>
+
+    @using (Html.BeginForm("Register", "Account", FormMethod.Post, new { @class = "form-horizontal", role = "form" }))
+    {
+        @Html.AntiForgeryToken()
+        <h4 class="text-center">Create a new account.</h4>
+        <hr />
+        <div class="text-center img-login">
+            <img src="~/Images/register.png" style="max-block-size: 100px" />
+        </div>
+        @Html.ValidationSummary("", new { @class = "text-danger" })
+        <div class=" row form-group">
+            @Html.LabelFor(m => m.Email, new { @class = "col-md-4 control-label form-label" })
+            <div class="col-md-7">
+                @Html.TextBoxFor(m => m.Email, new { @class = "form-control form-textbox" })
+            </div>
+        </div>
+        <div class="row form-group">
+            @Html.LabelFor(m => m.Password, new { @class = "col-md-4 control-label form-label" })
+            <div class="col-md-7">
+                @Html.PasswordFor(m => m.Password, new { @class = "form-control form-textbox" })
+            </div>
+        </div>
+        <div class="row form-group">
+            @Html.LabelFor(m => m.ConfirmPassword, new { @class = "control-label form-label" })
+            <div class="col-md-7">
+                @Html.PasswordFor(m => m.ConfirmPassword, new { @class = "form-control form-textbox" })
+            </div>
+        </div>
+        <hr />
+        <div class="form-group">
+            <div class="text-center">
+                <input type="submit" class="login-register-btn" value="Register" />
+            </div>
+        </div>
+    }
+</div>
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}
+@section Styles{
+    <link href="~/Content/StyleSheet.css" />
+}

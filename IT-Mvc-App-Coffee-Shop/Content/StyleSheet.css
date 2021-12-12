@@ -1,0 +1,647 @@
+﻿
+/* LAYOUT */
+body {
+    background: #eaded6;
+    font-family: Bahnschrift;
+    padding-bottom: 0;
+    color: #442f21;
+    overflow-x: hidden;
+}
+.navbar {
+    padding: 0.5% 4%;
+}
+nav {
+    background-color: #f5efeb;
+    font-size: large;
+    font-weight: 600;
+}
+    nav a {
+        color: #442f21;
+    }
+        nav a:hover {
+            color: #9E978E;
+            text-decoration: none;
+        }
+.navbar-brand {
+    font-size: 30px;
+    font-weight: 900;
+    margin-top: -5px;
+}
+.footer-social-media {
+    max-block-size: 50px;
+    margin-right: 10px;
+}
+.footer-links a{
+    text-decoration: none;
+}
+footer{
+    background: #f5efeb;
+    margin: 0 -15px;
+}
+
+/* EDIT, DELETE, CREATE, DETAILS */
+
+.edit-card {
+    margin: 5% 28%;
+    border-radius: 15px;
+    box-shadow: 2px 3px 3px grey;
+}
+.details-card {
+    margin: 5% 10%;
+    border-radius: 15px;
+    box-shadow: 2px 3px 3px grey;
+}
+.edit-header, .create-header {
+    text-align: center;
+    margin-top: 5%;
+    font-weight: 900;
+    margin-left: -3%;
+}
+.details-header {
+    margin-top: 3%;
+    font-size: 50px;
+    font-weight: 900;
+    margin-left: -4%;
+}
+.basic-info-details {
+    margin-left: 20%;
+    margin-top: 0;
+}
+.set-border-left {
+    border-left: 1px solid rgb(0 0 0 / 0.10);
+}
+.create-card {
+    margin: 5% 30%;
+    border-radius: 15px;
+    box-shadow: 2px 3px 3px grey;
+}
+.submit-btn {
+    margin: 3%;
+    margin-left: 38%;
+    padding: 1% 3%;
+    border-radius: 10px;
+}
+textarea {
+    max-width: 500px;
+}
+.form-edit-create {
+    padding-left: 13%;
+}
+.back-to-list {
+    margin-left: 30%;
+    border-radius: 10px;
+    margin-bottom: 2%
+}
+/* LOGIN REGISTER */
+.login-register-form {
+    background-color: #442f21;
+    width: 30%;
+    padding: 3%;
+    margin-top: 5%;
+    margin-left: 35%;
+    border-radius: 15px;
+    border: none;
+    color: antiquewhite;
+}
+.img-login {
+    margin-bottom: 10%;
+}
+.form-label {
+    text-align: right;
+    margin-top: 5%;
+    font-size: 15px;
+    font-weight: 600;
+}
+
+.form-textbox {
+    border-radius: 5px;
+    border: none;
+    margin: 5%;
+    margin-left: -5%;
+}
+.circle-green {
+    position: absolute;
+    top: 15%;
+    left: -10%;
+    height: 600px;
+    width: 600px;
+    background-color: rgb(63 88 80 / 0.61);
+    border-radius: 50%;
+}
+.circle-brown {
+    position: absolute;
+    top: -25%;
+    right: 0%;
+    clip-path: circle(61.8% at 96% 26%);
+    height: 900px;
+    width: 900px;
+    background-color: #b7a295;
+}
+.another-service {
+    width: 25%;
+    margin: 2%;
+    margin-left: 38%;
+    text-align: center;
+}
+.register-as-new-link, .forgot-pass{
+    font-size: 20px;
+    color: #f5efeb;
+}
+
+/* HOME */
+.img-home {
+    margin-top: 7%;
+    border-radius: 35%;
+    /*max-block-size: 700px;*/
+}
+.main-title {
+    margin-top: 35%;
+    margin-right: -15%;
+    font-size: 160px;
+    font-family: 'Ogg';
+    font-weight: 900;
+    /*-webkit-text-stroke: 3px black;*/
+}
+.sub-title {
+    margin-top: -7%;
+    font-size: 50px;
+    font-weight: 600;
+    font-family: 'Ogg';
+    background: #7cb5c2;
+    color: #f5efeb;
+    padding: 3%;
+    border-radius: 45px;
+    width: 60%;
+    margin-left: 55%;
+}
+.home-desc {
+    font-size: larger;
+    text-align: right;
+    margin-right: -15%;
+    margin-left: 20%;
+}
+
+/* CONTACT ABOUT */
+
+.contact-about-header {
+    background-color: #b7a295;
+    margin: 0 -15px;
+    padding-top: 3%;
+    padding-bottom: 1%;
+    color: #ece0d1;
+    text-shadow: 2px 2px grey;
+    border: 1px solid #9E978E;
+}
+
+    .contact-about-header h2 {
+        font-weight: 900;
+        font-size: 100px;
+        margin: 3%;
+        margin-bottom: 0;
+    }
+
+    .contact-about-header h3 {
+        margin-top: 2%;
+    }
+
+.contact-main {
+    font-weight: 600;
+    font-size: 25px;
+    color: #331B16;
+    width: 50%;
+    margin: 4%;
+    margin-left: 25%;
+    padding: 2%;
+    border-radius: 15px;
+    box-shadow: 2px 3px 2px grey;
+}
+
+.emails a {
+    margin: 0.5%;
+    background-color: #442f21;
+    padding: 10px;
+    border-radius: 30px;
+    color: #f5efeb;
+}
+
+    .emails a:hover {
+        background-color: transparent;
+        border: 2px solid #442f21;
+        color: #442f21;
+        text-decoration: none;
+    }
+
+.about-us-main {
+    margin: 7%;
+    margin-top: 5%;
+    text-align: justify;
+    padding: 2%;
+    border-radius: 15px;
+    box-shadow: 2px 3px 2px grey;
+}
+
+/* HEADER STYLE */
+
+.header-style {
+    display: flex;
+    justify-content: center;
+    padding-top: 5%;
+    background: #b7a295;
+    margin: 0 -15px;
+    margin-bottom: 3%;
+}
+.headings-style {
+    font-size: 180px;
+    font-weight: 900;
+    color: #ece0d1;
+    text-shadow: 2px 4px #442f21;
+    margin-right: 4%;
+}
+
+.header-icon {
+    max-block-size: 200px;
+    margin-top: -1%;
+    margin-right: 5%;
+}
+
+.create-link-style {
+    background-color: #442f21;
+    padding: 1%;
+    border-radius: 10px;
+    color: #f5efeb;
+}
+    .create-link-style:hover{
+        border: 2px solid #634832;
+        background-color: transparent;
+        color: #634832;
+        text-decoration: none;
+    }
+.adj-margin {
+    margin-top: 3%;
+    margin-left: -3%;
+}
+
+/* TABLE */
+.thead-style {
+    background-color: #b7a295;
+    color: #ece0d1;
+}
+.table td {
+    vertical-align: middle;
+}
+.page-item.active .page-link {
+    background-color: #3a8a9f;
+    border-color: #3a8a9f;
+}
+.action-link-style {
+    background-color: #3a8a9f;
+    padding: 4%;
+    border-radius: 10px;
+    color: #f5efeb;
+    font-size: x-large;
+}
+    .action-link-style:hover {
+        background-color: transparent;
+        color: #3a8a9f;
+        border: 2px solid #3a8a9f;
+        text-decoration: none;
+    }
+   
+/* BRANDS */
+.logo-brand-image {
+    max-width: 100px;
+}
+.about-col {
+    width: 50%;
+    text-align: justify;
+    font-size: large;
+}
+
+.logo-col {
+    width: 200px;
+}
+
+.links-col {
+    width: 300px;
+}
+
+.name-col {
+    width: 150px;
+    font-size: x-large;
+    font-weight: 800;
+}
+.about-us-text {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2; /* number of lines to show */
+    -webkit-box-orient: vertical;
+}
+/* STORE */
+.store-name-col {
+    font-size: large;
+    font-weight: 800;
+}
+.loc-col {
+    font-size: larger;
+    width: 30%;
+}
+.menu-col a {
+    color: #634832;
+}
+.link-col-store {
+    width: 20%;
+}
+
+/* DRINKS */
+
+.row {
+    justify-content: space-evenly;
+}
+.change-shape {
+    margin: 1%;
+    border-radius: 15px;
+    border: none;
+    padding: 1%;
+    background-color: #f5efeb;
+    color: #442f21;
+    text-align: justify;
+    box-shadow: 2px 3px 3px rgb(0 0 0 / 0.40)
+}
+.discount-card {
+    width: 45%;
+    margin: 1%;
+    margin-left: 26%;
+    border-radius: 10px;
+    background-color: #b7a295;
+    color: #ece0d1;
+    border: none;
+}
+
+.action-link-drinks {
+    background-color: #9E978E;
+    color: #f5efeb;
+    padding: 2.5% 4%;
+    border-radius: 5px;
+}
+    .action-link-drinks:hover {
+        background-color: transparent;
+        transition: all 0.3s ease-in-out;
+        color: #442f21;
+        border: 2px solid #9E978E;
+        text-decoration: none;
+    }
+.action-link-order {
+    padding: 3%;
+    background: #f5efeb;
+    border-radius: 10px;
+    font-size: 30px;
+    color: #442f21;
+    font-weight: 900;
+    margin-left: 25%;
+}
+    .action-link-order:hover {
+        text-decoration: none;
+        color: #f5efeb;
+        background-color: transparent;
+        border: 2px solid #f5efeb;
+    }
+
+.flex-card-items {
+    display: flex;
+    justify-content: flex-start;
+}
+
+.style-discount-button {
+    margin-top: 0;
+    margin-bottom: 3%;
+    margin-left: 40%;
+    cursor: pointer;
+    font-size: 30px; 
+}
+.offer-style {
+    background-color: #f5efeb;
+    border-radius: 10px;
+    padding: 1% 2%;
+    border: none;
+    box-shadow: 3px 3px 2px #9E978E;
+}
+    .offer-style:hover {
+        background: #bdd7a2;
+        box-shadow: none;
+        transition: all 0.5s ease-in-out;
+    }
+
+.text-discount {
+    background: #634832;
+    padding: 3%;
+    text-align: center;
+    border-radius: 15px;
+}
+.sorting-btn {
+    margin: 2%;
+    margin-left: 34%
+}
+.sort-by-btn {
+    color: #442f21;
+    font-size: 20px;
+    padding: 1%;
+}
+    .sort-by-btn:hover {
+        color: #442f21;
+        text-decoration: none;
+        font-weight: 900;
+    }
+.move-pagin {
+    margin-left: 5%
+}
+.pagination-container .pagination li {
+    padding: 10px 15px;
+    background: whitesmoke;
+    border-radius: 5px;
+    margin: 2px;
+    cursor: pointer;
+    font-size: 20px;
+}
+    .pagination-container .pagination li a {
+        color: #3a8a9f;
+    }
+/* CREATE PROFILE */
+.card-profile {
+    margin-top: 19%;
+    width: 70%;
+    margin-left: 28%;
+    border-radius: 25px;
+    padding: 5%;
+    background-color: #f5efeb;
+    color: rgb(33 57 49);
+    font-size: large;
+    text-align: right;
+    padding-right: 10%;
+    border: none;
+    box-shadow: 2px 3px 3px #9E978E;
+}
+.img-create-profile {
+    max-block-size: 700px;
+    margin-top: -2%;
+    margin-left: -2%;
+}
+.val {
+    font-size: x-small;
+}
+
+/* DETAILS PROFILE */
+
+.card-details-profile {
+    margin-top: 16%;
+    font-size: 28px;
+    padding: 5%;
+    border-radius: 15px;
+    box-shadow: 2px 3px 3px grey;
+    background-color: #e0ae92;
+    width: 80%;
+    margin-left: 15%;
+    border: none;
+}
+.img-profile {
+    max-block-size: 650px;
+    margin-top: 10%;
+    margin-left: -10%;
+}
+dt {
+    padding-bottom: 3%;
+}
+.set-border {
+    border-right: 1px solid rgb(0 0 0 / 0.10);
+}
+.edit-profile-link {
+    background-color:#f5efeb;
+    padding: 3%;
+    color: #442f21;
+    width: 50%;
+    margin-left: 25%;
+    border-radius: 15px;
+}
+    .edit-profile-link:hover {
+        background-color: transparent;
+        color: #f5efeb;
+        text-decoration: none;
+        border: 2px solid #f5efeb;
+    }
+.card-edit-profile {
+    margin-left: 30%;
+    margin-top: 3%;
+    border-radius: 15px;
+    box-shadow: 2px 3px 3px grey;
+    width: 40%;
+}
+.form-edit-profile {
+    padding-left: 23%;
+}
+/* USER TABLE */
+/* ORDER */
+.order-form {
+    margin-top: 10%;
+    border-radius: 15px;
+    box-shadow: 2px 3px 3px rgb(0 0 0 / 0.40);
+}
+.order-header {
+    font-size: 30px;
+    margin-left: 15%;
+    margin-top: 5%;
+}
+.form-style {
+    padding: 3% 15%;
+}
+.img-order {
+    margin-top: 2%;
+}
+
+/* DELIVERY */
+
+.card-delivery {
+    margin-top: -40%;
+    margin-left: 45%;
+    width: 70%;
+    border-radius: 15px;
+    box-shadow: 2px 3px 3px rgb(0 0 0 / 0.40);
+    font-size: x-large;
+    padding: 5%;
+}
+.delivery-img {
+    margin-top: -5%;
+    margin-left: -15%;
+}
+.thank-you {
+    margin-top: 5%;
+    margin-left: 44%;
+    font-weight: 900;
+    font-size: 50px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+
+
+.flip-card {
+    background-color: transparent;
+    width: 400px;
+    height: 360px;
+    perspective: 1000px; /* Remove this if you don't want the 3D effect */
+    box-shadow: 2px 3px 3px rgb(0 0 0 / 0.40);
+    border-radius: 20px;
+    margin: 1%;
+}
+
+/* This container is needed to position the front and back side */
+.flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: justify;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+    border-radius: 15px;
+}
+
+/* Do an horizontal flip when you move the mouse over the flip box container */
+.flip-card:hover .flip-card-inner {
+    transform: rotateY(180deg);
+}
+
+/* Position the front and back side */
+.flip-card-front, .flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden; /* Safari */
+    backface-visibility: hidden;
+    border-radius: 20px;
+}
+
+/* Style the front side (fallback if image is missing) */
+.flip-card-front {
+    padding-top: 12%;
+    background-color: #f5efeb;
+    color: #442f21;
+}
+
+/* Style the back side */
+.flip-card-back {
+    background-color: #442f21;
+    color: #f5efeb;
+    transform: rotateY(180deg);
+    padding: 10%;
+}
+
+/*MODAL STYLE*/
+
+.modal-content {
+    border-radius: 15px;
+}
+
+.role-card {
+    margin-top: -3%;
+    padding: 4%;
+    border-radius: 15px;
+    box-shadow: 2px 3px 3px grey;
+}

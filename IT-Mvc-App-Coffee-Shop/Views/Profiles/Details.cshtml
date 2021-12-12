@@ -1,0 +1,66 @@
+﻿@model IT_Mvc_App_Coffee_Shop.Models.Profile
+
+@{
+    ViewBag.Title = Model.FirstName + " " + Model.LastName;
+}
+
+<div class="row">
+    <div class="col-md-5">
+        <img src="~/Images/profile.png" class="img-profile" />
+    </div>
+
+    <div class="col-md-6">
+        <div class="card card-details-profile">
+
+            <h4 style="font-size: 60px; text-align: center; color: #f5efeb; text-shadow: 1px 2px #808080 ">@Model.FirstName's Profile</h4>
+            <h6 class="text-center">@Model.Email</h6>
+            <hr /><br />
+            <dl class="dl-horizontal row">
+                <div class="col-md-6 text-right set-border">
+                    <dt>
+                        @Html.DisplayNameFor(model => model.FirstName)
+                    </dt>
+                    <dt>
+                        @Html.DisplayNameFor(model => model.LastName)
+                    </dt>
+                    <dt>
+                        @Html.DisplayNameFor(model => model.Age)
+                    </dt>
+                    @if (User.IsInRole("Admin") || User.IsInRole("Manager"))
+                    {
+                        
+                    <dt>
+                        @Html.DisplayNameFor(model => model.Role)
+                    </dt>
+                    }
+                </div>
+                <div class="col-md-6">
+                    <dd>
+                        @Html.DisplayFor(model => model.FirstName)
+                    </dd>
+                    <dd>
+                        @Html.DisplayFor(model => model.LastName)
+                    </dd>
+                    <dd>
+                        @Html.DisplayFor(model => model.Age)
+                    </dd>
+                    @if (User.IsInRole("Admin") || User.IsInRole("Manager"))
+                    { 
+                    <dd>
+                        @Html.DisplayFor(model => model.Role)
+                    </dd>
+                    }
+
+                </div>
+            </dl>
+            <hr />
+            @Html.ActionLink("Edit your profile", "Edit", new { id = Model.Id }, new { @class = "text-center edit-profile-link" })
+        </div>
+    </div>
+</div>
+@if (User.IsInRole("Admin"))
+{
+    <p>
+        @Html.ActionLink("Back to List", "Index", null, new { @class = "btn btn-outline-dark" })
+    </p>
+}

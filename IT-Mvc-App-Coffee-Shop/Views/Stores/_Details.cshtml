@@ -1,0 +1,28 @@
+﻿@model IT_Mvc_App_Coffee_Shop.Models.Store
+
+
+<h3 class="modal-title text-center" style="margin-top: 5%;">@Model.Name</h3>
+<hr />
+<div class="modal-body modal-style">
+    <dl class="dl-horizontal">
+        <div class="text-center">
+        <img src="@Model.LocationImg" style="max-block-size: 250px;" />
+        </div>
+        <hr />
+        <dt class="text-center" style="font-size: 30px">
+            @Html.DisplayFor(m => m.Rating)
+            <img src="~/Images/stars.png" style="max-block-size: 20px; margin-top: -2%" />
+        </dt>
+        <dd class="text-center" style="padding: 4%; font-size: 15px">
+          <b>
+            @Html.DisplayName("Where to find us ?")<br />
+              </b> 
+              
+           @Html.DisplayFor(m => m.Location)
+        </dd>
+    </dl>
+</div>
+<div class="modal-footer">
+    <button type="button" class="btn btn-outline-dark" style="border-radius:10px" data-dismiss="modal">Close</button>
+</div>
+

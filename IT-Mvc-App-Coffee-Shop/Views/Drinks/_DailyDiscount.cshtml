@@ -1,0 +1,23 @@
+﻿@model IT_Mvc_App_Coffee_Shop.Models.Drink
+<div class="card discount-card">
+    <div class="card-body flex-card-items">
+        <img src="~/Images/discount.png" style="max-block-size: 200px; border-radius: 10%" />
+        <div class="text-discount">
+            <h3>
+                Today's special offer<br />
+            </h3>
+            <h1>
+                <b>
+                    @Model.Name
+                </b>
+            </h1>
+            <h5>
+                with a special price of
+            </h5>
+            <h3>
+                @String.Format("{0:F}", Model.Price) MKD
+            </h3>
+        </div>
+    </div>
+</div>
+

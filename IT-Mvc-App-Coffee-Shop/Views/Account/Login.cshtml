@@ -1,0 +1,71 @@
+﻿@using IT_Mvc_App_Coffee_Shop.Models
+@model LoginViewModel
+@{
+    ViewBag.Title = "Log in";
+}
+
+<div class="circle-green"></div>
+<div class="circle-brown"></div>
+<div class="login-register-form card">
+    <h2 class="text-center">@ViewBag.Title.</h2>
+    <section id="loginForm">
+        @using (Html.BeginForm("Login", "Account", new { ReturnUrl = ViewBag.ReturnUrl }, FormMethod.Post, new { @class = "form-horizontal", role = "form" }))
+        {
+            @Html.AntiForgeryToken()
+            <h4 class="text-center">Use a local account to log in.</h4>
+            <hr />
+            <div class="text-center img-login">
+                <img src="~/Images/login.png" style="max-block-size: 100px" />
+            </div>
+            @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+            <div class=" row form-group">
+                @Html.LabelFor(m => m.Email, new { @class = "col-md-4 control-label form-label" })
+                <div class="col-md-7">
+                    @Html.TextBoxFor(m => m.Email, new { @class = "form-control form-textbox" })
+                    @Html.ValidationMessageFor(m => m.Email, "", new { @class = "text-danger" })
+                </div>
+            </div>
+            <div class="row form-group">
+                @Html.LabelFor(m => m.Password, new { @class = "col-md-4 control-label form-label" })
+                <div class="col-md-7">
+                    @Html.PasswordFor(m => m.Password, new { @class = "form-control form-textbox" })
+                    @Html.ValidationMessageFor(m => m.Password, "", new { @class = "text-danger" })
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="remember-me">
+                    <div class="checkbox text-center">
+                        @Html.CheckBoxFor(m => m.RememberMe)
+                        @Html.LabelFor(m => m.RememberMe)
+                    </div>
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="text-center">
+                    <input type="submit" value="Log in" class="login-register-btn" />
+                    <hr />
+                    <p>
+                        @Html.ActionLink("Register as a new user", "Register", new { }, new { @class = "register-as-new-link" })
+                    </p>
+                </div>
+            </div>
+            @*Enable this once you have account confirmation enabled for password reset functionality*@
+            <p class="text-center">
+                @Html.ActionLink("Forgot your password?", "ForgotPassword", new { }, new { @class = "forgot-pass" })
+            </p>
+        }
+    </section>
+</div>
+
+<div class="another-service">
+    <section id="socialLoginForm another-service">
+        @Html.Partial("_ExternalLoginsListPartial", new ExternalLoginListViewModel { ReturnUrl = ViewBag.ReturnUrl })
+    </section>
+</div>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}
+@section Styles{
+    <link href="~/Content/StyleSheet.css" />
+}

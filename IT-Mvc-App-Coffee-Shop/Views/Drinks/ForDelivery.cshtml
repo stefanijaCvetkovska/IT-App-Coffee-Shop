@@ -1,0 +1,29 @@
+﻿@model IT_Mvc_App_Coffee_Shop.Models.MakeOrder
+@{
+    ViewBag.Title = "Delivery";
+}
+
+
+<h2 class="thank-you">Thank you for your order!</h2>
+<h4 style="margin-left: 44.5%">Your coffee will be delivered in less than 20 minutes!</h4>
+<div class="row">
+    <div class="delivery-img col-md"-6>
+        <img src="~/Images/delivery.png" style="max-block-size: 600px"/>
+    </div>
+    <div class="col-md-6">
+    <div class="card card-delivery">
+        <h3>
+             Delivery info for your order
+        </h3>
+        <hr />
+        <div>
+            <p>
+                <b>Phone:</b> @ViewBag.Phone<br />
+                <b> Address:</b> @ViewBag.Address<br />
+                <b>Drink: </b> @ViewBag.Drink
+            </p>
+        </div>
+    </div>
+    </div>
+</div>
+
