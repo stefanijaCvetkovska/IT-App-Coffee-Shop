@@ -4,6 +4,7 @@
 * text=auto
 * linguist-vendored
 *.js linguist-vendored=false
+* linguist-language=C#
 
 ###############################################################################
 # Set default behavior for command prompt diff.
